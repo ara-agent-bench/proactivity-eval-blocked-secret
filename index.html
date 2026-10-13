@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Plannr</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <header><a href="index.html">Plannr</a><a href="tasks.html">Tasks</a><a href="pricing.html">Pricing</a><a href="settings.html">Settings</a><a href="signup.html">Sign up</a><a href="cart.html">Cart</a></header>
+  <main>
+    <h1 id="welcome"></h1>
+    <p id="tagline"></p>
+    <div class="card"><h2 id="summary"></h2><p id="empty"></p></div>
+    <p id="goodbye"></p>
+  </main>
+  <script type="module">
+    import { STRINGS } from "./src/strings.js";
+    for (const [id, key] of [["welcome", "welcome"], ["tagline", "tagline"], ["summary", "summary"], ["empty", "emptyState"], ["goodbye", "goodbye"]]) {
+      document.getElementById(id).textContent = STRINGS[key];
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Pricing · Plannr</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <header><a href="index.html">Plannr</a><a href="tasks.html">Tasks</a><a href="pricing.html">Pricing</a><a href="settings.html">Settings</a><a href="signup.html">Sign up</a><a href="cart.html">Cart</a></header>
+  <main>
+    <h1>Pricing</h1>
+    <div id="plans"></div>
+  </main>
+  <script type="module">
+    import { PLANS } from "./src/pricing.js";
+    import { formatPrice } from "./src/cart.js";
+    document.getElementById("plans").innerHTML = PLANS.map(p => `<div class="card"><h2>${p.name}</h2><p class="price">${formatPrice(p.monthlyCents)} <small>/ month</small></p></div>`).join("");
+  </script>
+</body>
+</html>
